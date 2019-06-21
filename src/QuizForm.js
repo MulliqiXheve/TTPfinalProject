@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "./Footer"
 
 function Quizform(props) {
     return (
@@ -12,8 +13,9 @@ function Quizform(props) {
                 onClick={props.handleChange}
                   />
           </form>
+         
         </div>
     )
 }
 
-export default Quizform
+export default Quizform;

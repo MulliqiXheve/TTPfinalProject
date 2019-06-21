@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import QuizForm from './QuizForm.js'
 import QuizCard from './QuizCard.js'
+import Footer from "./Footer.js";
 
 class Results extends Component{
   state = {
@@ -27,7 +28,7 @@ render() {
   let elems = [];     // container
   let index = 0;
   for(let zip of this.state.quizzes) {
-    elems.push(<ResultsBox key={index++} {...}/>);
+    elems.push(<ResultsBox key={index++} {...zip}/>);
   }
   
   return (
@@ -38,6 +39,7 @@ render() {
       </form>
 
       {elems}
+    
     </div>
   );
 }
